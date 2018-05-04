@@ -23,8 +23,8 @@ import java.util.Set;
 
         private String limit;
 
-        @OneToMany(mappedBy = "characterDataContainer",cascade = CascadeType.ALL)
-        private Set<Characters> results;
+//        @OneToMany(mappedBy = "characterDataContainer",cascade = CascadeType.ALL)
+//        private Set<Characters> results;
 
         private String count;
 
@@ -32,60 +32,4 @@ import java.util.Set;
 
         @OneToOne
         private CharacterDataWrapper characterDataWrapper;
-
-        public String getTotal ()
-        {
-            return total;
-        }
-
-        public void setTotal (String total)
-        {
-            this.total = total;
-        }
-
-        public String getLimit ()
-        {
-            return limit;
-        }
-
-        public void setLimit (String limit)
-        {
-            this.limit = limit;
-        }
-
-        public Set<Characters> getResults ()
-        {
-            return results;
-        }
-
-        public void setResults (Set<Characters> results)
-        {
-            this.results = results;
-        }
-
-        public String getCount ()
-        {
-            return count;
-        }
-
-        public void setCount (String count)
-        {
-            this.count = count;
-        }
-
-        public String getOffset ()
-        {
-            return offset;
-        }
-
-        public void setOffset (String offset)
-        {
-            this.offset = offset;
-        }
-
-        @Override
-        public String toString()
-        {
-            return "ClassPojo [total = "+total+", limit = "+limit+", results = "+results+", count = "+count+", offset = "+offset+"]";
-        }
     }

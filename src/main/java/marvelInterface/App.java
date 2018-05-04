@@ -56,6 +56,8 @@ public class App implements CommandLineRunner
 
     @Override
     public void run(String... strings) throws Exception {
+
+
         comicSummarRepository.save(restTemplate.getForObject(url,ComicSummary.class));
         comicListRepository.save(restTemplate.getForObject(url,ComicList.class));
         eventSummaryRepository.save(restTemplate.getForObject(url,EventSummary.class));
@@ -66,11 +68,11 @@ public class App implements CommandLineRunner
         eventListRepository.save(restTemplate.getForObject(url,EventList.class));
         storyListRepository.save(restTemplate.getForObject(url,StoryList.class));
         seriesListRepositroy.save(restTemplate.getForObject(url,SeriesList.class));
+        characterRepository.save(restTemplate.getForObject(url,Characters.class));
+//        characterDataContainerRepository.save(restTemplate.getForObject(url,CharacterDataContainer.class));
+        characterDataWrapperRepositoty.save(restTemplate.getForObject(url,CharacterDataWrapper.class));
 //        for (Characters characterr : characterDataWrapper.getData().getResults()) {
 //            characterRepository.save(characterr);
 //        }
-        characterRepository.save(restTemplate.getForObject(url,Characters.class));
-        characterDataWrapperRepositoty.save(restTemplate.getForObject(url,CharacterDataWrapper.class));
-        characterDataContainerRepository.save(restTemplate.getForObject(url,CharacterDataContainer.class));
     }
 }

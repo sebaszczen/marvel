@@ -26,7 +26,7 @@ public class Characters {
     @OneToOne(mappedBy = "characters")
     private SeriesList series;
     @OneToOne(mappedBy = "characters")
-    private EventList stories;
+    private EventList events;
     @OneToOne(mappedBy = "characters")
     private Image thumbnail;
 
@@ -35,10 +35,10 @@ public class Characters {
     @OneToMany(mappedBy = "characters", cascade = CascadeType.ALL)
     private Set<Url> urls;
     @OneToOne(mappedBy = "characters")
-    private StoryList events;
+    private StoryList stories;
     //    @Column(name="CONTENT", length=512)
-//    @Column(columnDefinition = "LONGTEXT")
-//    private String description;
+    @Column(columnDefinition = "LONGTEXT")
+    private String description;
 
     private String name;
 
