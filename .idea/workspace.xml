@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82a2c0-0831-4e9a-a330-b739f0336cff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marvelInterface/App.java" afterPath="$PROJECT_DIR$/src/main/java/marvelInterface/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marvelInterface/characterDataWrapper/CharacterDataContainer.java" afterPath="$PROJECT_DIR$/src/main/java/marvelInterface/characterDataWrapper/CharacterDataContainer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marvelInterface/characterDataWrapper/CharacterDataWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/marvelInterface/characterDataWrapper/CharacterDataWrapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marvelInterface/characterDataWrapper/Characters.java" afterPath="$PROJECT_DIR$/src/main/java/marvelInterface/characterDataWrapper/Characters.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marvelInterface/controller/ApiController.java" afterPath="$PROJECT_DIR$/src/main/java/marvelInterface/controller/ApiController.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/marvelInterface/characterDataWrapper/CharacterDataWrapper.class" afterPath="$PROJECT_DIR$/target/classes/marvelInterface/characterDataWrapper/CharacterDataWrapper.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -489,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525450945151</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit">
+      <created>1525466019422</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525466019422</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
