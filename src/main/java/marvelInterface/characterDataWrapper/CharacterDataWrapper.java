@@ -1,18 +1,28 @@
 package marvelInterface.characterDataWrapper;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Builder
+import javax.persistence.*;
+
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class CharacterDataWrapper {
-        private String attributionText;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String attributionText;
 
         private String etag;
 
         private String status;
-
+        @OneToOne
         private CharacterDataContainer data;
 
         private String copyright;

@@ -1,16 +1,37 @@
 package marvelInterface.characterDataWrapper;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
     public class CharacterDataContainer
     {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
         private String total;
 
         private String limit;
 
-        private Character[] results;
+        @OneToMany(mappedBy = "characterDataContainer",cascade = CascadeType.ALL)
+        private List<Characterr> results;
 
         private String count;
 
         private String offset;
+
+        @OneToOne
+        private CharacterDataWrapper characterDataWrapper;
 
         public String getTotal ()
         {
@@ -32,12 +53,12 @@ package marvelInterface.characterDataWrapper;
             this.limit = limit;
         }
 
-        public Character[] getResults ()
+        public List<Characterr> getResults ()
         {
             return results;
         }
 
-        public void setResults (Character[] results)
+        public void setResults (List<Characterr> results)
         {
             this.results = results;
         }

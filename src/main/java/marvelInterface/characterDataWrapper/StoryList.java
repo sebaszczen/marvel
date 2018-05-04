@@ -1,18 +1,26 @@
 package marvelInterface.characterDataWrapper;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Builder
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class StoryList {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private StorySummary[] items;
+    @OneToOne
+    private Characterr characterr;
+    @OneToMany(mappedBy = "storyList", cascade = CascadeType.ALL)
+    private Set<StorySummary> items;
 
     private String collectionURI;
 
@@ -20,11 +28,11 @@ public class StoryList {
 
     private String returned;
 
-    public StorySummary[] getItems() {
+    public Set<StorySummary> getItems() {
         return items;
     }
 
-    public void setItems(StorySummary[] items) {
+    public void setItems(Set<StorySummary> items) {
         this.items = items;
     }
 
