@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -16,32 +17,35 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Characterr {
+public class Characters {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-    @OneToOne(mappedBy ="characterr")
+    private Long idd;
+
+    private int id;
+    @OneToOne(mappedBy = "characters")
     private SeriesList series;
-    @OneToOne(mappedBy ="characterr")
+    @OneToOne(mappedBy = "characters")
     private EventList stories;
-    @OneToOne(mappedBy ="characterr")
+    @OneToOne(mappedBy = "characters")
     private Image thumbnail;
 
     private String resourceURI;
 
-    @OneToMany(mappedBy = "characterr", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "characters", cascade = CascadeType.ALL)
     private Set<Url> urls;
-    @OneToOne(mappedBy ="characterr")
+    @OneToOne(mappedBy = "characters")
     private StoryList events;
-
-    private String description;
+    //    @Column(name="CONTENT", length=512)
+//    @Column(columnDefinition = "LONGTEXT")
+//    private String description;
 
     private String name;
 
     @ManyToOne
     private CharacterDataContainer characterDataContainer;
 
-    @OneToOne(mappedBy ="characterr")
+    @OneToOne(mappedBy = "characters")
     private ComicList comics;
 
     private String modified;

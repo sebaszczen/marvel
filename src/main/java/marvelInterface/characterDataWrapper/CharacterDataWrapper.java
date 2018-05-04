@@ -22,7 +22,7 @@ public class CharacterDataWrapper {
         private String etag;
 
         private String status;
-        @OneToOne
+        @OneToOne(mappedBy = "characterDataWrapper")
         private CharacterDataContainer data;
 
         private String copyright;

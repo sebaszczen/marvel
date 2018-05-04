@@ -19,7 +19,7 @@ public class ComicList {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         @OneToOne
-        private Characterr characterr;
+        private Characters characters;
         @OneToMany(mappedBy = "comicList", cascade = CascadeType.ALL)
         private Set<ComicSummary> items =new HashSet<>();
         private String collectionURI;

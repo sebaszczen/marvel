@@ -17,7 +17,8 @@ public class Url {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
-    Characterr characterr;
+    Characters characters;
+
     private String type;
 
     private String url;

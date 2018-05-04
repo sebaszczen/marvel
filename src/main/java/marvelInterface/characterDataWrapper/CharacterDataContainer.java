@@ -24,7 +24,7 @@ import java.util.Set;
         private String limit;
 
         @OneToMany(mappedBy = "characterDataContainer",cascade = CascadeType.ALL)
-        private List<Characterr> results;
+        private Set<Characters> results;
 
         private String count;
 
@@ -53,12 +53,12 @@ import java.util.Set;
             this.limit = limit;
         }
 
-        public List<Characterr> getResults ()
+        public Set<Characters> getResults ()
         {
             return results;
         }
 
-        public void setResults (List<Characterr> results)
+        public void setResults (Set<Characters> results)
         {
             this.results = results;
         }

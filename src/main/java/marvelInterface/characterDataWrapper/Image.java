@@ -18,7 +18,7 @@ import javax.persistence.*;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         @OneToOne
-        private Characterr characterr;
+        private Characters characters;
         private String extension;
 
         private String path;

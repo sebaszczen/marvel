@@ -19,7 +19,7 @@ public class EventList {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         @OneToOne
-        private Characterr characterr;
+        private Characters characters;
         @OneToMany(mappedBy = "eventList", cascade = CascadeType.ALL)
         private Set<StorySummary> items;
 

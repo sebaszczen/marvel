@@ -1,15 +1,13 @@
 package marvelInterface;
 
 import marvelInterface.characterDataWrapper.*;
+import marvelInterface.characterDataWrapper.Characters;
 import marvelInterface.repositories.*;
-import marvelInterface.services.CharacterDataWrapperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Set;
 
 /**
  * Hello world!
@@ -65,14 +63,14 @@ public class App implements CommandLineRunner
         seriesSummaryRepository.save(restTemplate.getForObject(url,SeriesSummary.class));
         urlRepository.save(restTemplate.getForObject(url,Url.class));
         storySummaryRepository.save(restTemplate.getForObject(url,StorySummary.class));
-        eventListRepository.save(eventList);
+        eventListRepository.save(restTemplate.getForObject(url,EventList.class));
         storyListRepository.save(restTemplate.getForObject(url,StoryList.class));
         seriesListRepositroy.save(restTemplate.getForObject(url,SeriesList.class));
-        for (Characterr characterr : characterDataWrapper.getData().getResults()) {
-            characterr.setDescription("sdfg");
-            characterRepository.save(characterr);
-        }
-        characterDataContainerRepository.save(characterDataContainer);
-        characterDataWrapperRepositoty.save(characterDataWrapper);
+//        for (Characters characterr : characterDataWrapper.getData().getResults()) {
+//            characterRepository.save(characterr);
+//        }
+        characterRepository.save(restTemplate.getForObject(url,Characters.class));
+        characterDataWrapperRepositoty.save(restTemplate.getForObject(url,CharacterDataWrapper.class));
+        characterDataContainerRepository.save(restTemplate.getForObject(url,CharacterDataContainer.class));
     }
 }

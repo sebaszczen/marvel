@@ -1,7 +1,7 @@
 package marvelInterface.repositories;
 
-import marvelInterface.characterDataWrapper.Characterr;
+import marvelInterface.characterDataWrapper.Characters;
 import org.springframework.data.repository.CrudRepository;
 
-public interface CharacterRepository extends CrudRepository<Characterr, String> {
+public interface CharacterRepository extends CrudRepository<Characters, String> {
 }
