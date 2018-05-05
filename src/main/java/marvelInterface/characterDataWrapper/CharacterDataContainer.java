@@ -19,16 +19,16 @@ import java.util.Set;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
-        private String total;
+//        private String total;
 
-        private String limit;
+//        private String limit;
 
 //        @OneToMany(mappedBy = "characterDataContainer",cascade = CascadeType.ALL)
 //        private Set<Characters> results;
 
-        private String count;
+//        private String count;
 
-        private String offset;
+//        private String offset;
 
         @OneToOne
         private CharacterDataWrapper characterDataWrapper;

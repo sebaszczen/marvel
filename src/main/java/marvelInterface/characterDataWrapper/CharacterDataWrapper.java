@@ -23,8 +23,8 @@ public class CharacterDataWrapper {
 
         private String status;
 
-//        @OneToOne(mappedBy = "characterDataWrapper")
-//        private CharacterDataContainer data;
+        @OneToOne
+        private CharacterDataContainer data;
 //
         private String copyright;
 
@@ -32,75 +32,6 @@ public class CharacterDataWrapper {
 
         private String attributionHTML;
 
-//    public String getAttributionText ()
-//        {
-//            return attributionText;
-//        }
-//
-//        public void setAttributionText (String attributionText)
-//        {
-//            this.attributionText = attributionText;
-//        }
-//
-//        public String getEtag ()
-//        {
-//            return etag;
-//        }
-//
-//        public void setEtag (String etag)
-//        {
-//            this.etag = etag;
-//        }
-//
-//        public String getStatus ()
-//        {
-//            return status;
-//        }
-//
-//        public void setStatus (String status)
-//        {
-//            this.status = status;
-//        }
-//
-//        public CharacterDataContainer getData ()
-//        {
-//            return data;
-//        }
-//
-//        public void setData (CharacterDataContainer data)
-//        {
-//            this.data = data;
-//        }
-//
-//        public String getCopyright ()
-//        {
-//            return copyright;
-//        }
-//
-//        public void setCopyright (String copyright)
-//        {
-//            this.copyright = copyright;
-//        }
-//
-//        public String getCode ()
-//        {
-//            return code;
-//        }
-//
-//        public void setCode (String code)
-//        {
-//            this.code = code;
-//        }
-//
-//        public String getAttributionHTML ()
-//        {
-//            return attributionHTML;
-//        }
-//
-//        public void setAttributionHTML (String attributionHTML)
-//        {
-//            this.attributionHTML = attributionHTML;
-//        }
 
     }
 

@@ -69,10 +69,10 @@ public class App implements CommandLineRunner
         storyListRepository.save(restTemplate.getForObject(url,StoryList.class));
         seriesListRepositroy.save(restTemplate.getForObject(url,SeriesList.class));
         characterRepository.save(restTemplate.getForObject(url,Characters.class));
-        characterDataContainerRepository.save(restTemplate.getForObject(url,CharacterDataContainer.class));
-        characterDataWrapperRepositoty.save(restTemplate.getForObject(url,CharacterDataWrapper.class));
 //        for (Characters characterr : characterDataWrapper.getData().getResults()) {
 //            characterRepository.save(characterr);
 //        }
+        characterDataContainerRepository.save(restTemplate.getForObject(url,CharacterDataContainer.class));
+        characterDataWrapperRepositoty.save(restTemplate.getForObject(url,CharacterDataWrapper.class));
     }
 }
