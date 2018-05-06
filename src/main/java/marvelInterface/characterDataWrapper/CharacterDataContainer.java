@@ -1,5 +1,6 @@
 package marvelInterface.characterDataWrapper;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,22 +15,21 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-    public class CharacterDataContainer
-    {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
-//        private String total;
+public class CharacterDataContainer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+//    private String total;
+//    @JsonProperty
+//    private int limit;
 
-//        private String limit;
-
-//        @OneToMany(mappedBy = "characterDataContainer",cascade = CascadeType.ALL)
-//        private Set<Characters> results;
-
-//        private String count;
+    @OneToMany(mappedBy = "characterDataContainer", cascade = CascadeType.ALL)
+    private Set<Characters> results;
+//    @JsonProperty
+//    private String count;
 
 //        private String offset;
 
-        @OneToOne
-        private CharacterDataWrapper characterDataWrapper;
-    }
+    @OneToOne
+    private CharacterDataWrapper characterDataWrapper;
+}

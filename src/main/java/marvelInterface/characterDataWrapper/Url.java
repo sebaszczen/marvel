@@ -16,7 +16,8 @@ public class Url {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "Chr_ID")
     Characters characters;
 
     private String type;

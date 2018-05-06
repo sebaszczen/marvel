@@ -23,7 +23,7 @@ public class CharacterDataWrapper {
 
         private String status;
 
-        @OneToOne
+        @OneToOne(cascade = CascadeType.ALL)
         private CharacterDataContainer data;
 //
         private String copyright;

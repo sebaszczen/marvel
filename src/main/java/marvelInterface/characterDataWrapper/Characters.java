@@ -23,18 +23,18 @@ public class Characters {
     private Long idd;
 
     private int id;
-    @OneToOne(mappedBy = "characters")
+    @OneToOne(mappedBy = "characters",cascade = CascadeType.ALL)
     private SeriesList series;
-    @OneToOne(mappedBy = "characters")
+    @OneToOne(mappedBy = "characters",cascade = CascadeType.ALL)
     private EventList events;
-    @OneToOne(mappedBy = "characters")
+    @OneToOne(mappedBy = "characters",cascade = CascadeType.ALL)
     private Image thumbnail;
 
     private String resourceURI;
 
     @OneToMany(mappedBy = "characters", cascade = CascadeType.ALL)
     private Set<Url> urls;
-    @OneToOne(mappedBy = "characters")
+    @OneToOne(mappedBy = "characters",cascade = CascadeType.ALL)
     private StoryList stories;
     //    @Column(name="CONTENT", length=512)
     @Column(columnDefinition = "LONGTEXT")
@@ -45,7 +45,7 @@ public class Characters {
     @ManyToOne
     private CharacterDataContainer characterDataContainer;
 
-    @OneToOne(mappedBy = "characters")
+    @OneToOne(mappedBy = "characters",cascade = CascadeType.ALL)
     private ComicList comics;
 
     private String modified;
